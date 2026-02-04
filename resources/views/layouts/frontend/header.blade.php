@@ -13,26 +13,26 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item submenu"><a class="nav-link" href="{{ route('home') }}">Home</a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">Services</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
                             <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
                                 <ul>
-                                    <li class="nav-item"><a class="nav-link" href="#">Service
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">Service
                                             Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Blog
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog
                                             Details</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="#">Project</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="#">Project
                                             Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Our Team</a>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('team') }}">Our Team</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">404</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('faqs') }}">FAQ</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('notFound') }}">404</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item highlighted-menu"><a class="nav-link"
@@ -42,7 +42,7 @@
                     </div>
                     <!-- Let’s Start Button Start -->
                     <div class="header-btn d-inline-flex">
-                        <a href="contact.html" class="btn-default">Contact Us</a>
+                        <a href="{{ route('contact') }}" class="btn-default">Contact Us</a>
                     </div>
                     <!-- Let’s Start Button End -->
                 </div>

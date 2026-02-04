@@ -1,5 +1,26 @@
  @extends('layouts.frontend.master')
  @section('content')
+     <!-- Page Header Start -->
+     <div class="page-header parallaxie">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     <!-- Page Header Box Start -->
+                     <div class="page-header-box">
+                         <h1 class="text-anime-style-3" data-cursor="-opaque">About</h1>
+                         <nav class="wow fadeInUp">
+                             <ol class="breadcrumb">
+                                 <li class="breadcrumb-item"><a href="{{ route('home') }}">home</a></li>
+                                 <li class="breadcrumb-item active" aria-current="page">About</li>
+                             </ol>
+                         </nav>
+                     </div>
+                     <!-- Page Header Box End -->
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- Page Header End -->
      <!-- Page About Us Start -->
      <div class="page-about-us">
          <div class="container">
@@ -225,9 +246,11 @@
                  <!-- Section Title Start -->
                  <div class="section-title">
                      <h3 class="wow fadeInUp">what we do</h3>
-                     <h2 class="text-anime-style-3" data-cursor="-opaque">Building the future on a foundation of excellence
+                     <h2 class="text-anime-style-3" data-cursor="-opaque">Building the future on a foundation of
+                         excellence
                      </h2>
-                     <p class="wow fadeInUp" data-wow-delay="0.25s">We specialize in a wide range of construction services,
+                     <p class="wow fadeInUp" data-wow-delay="0.25s">We specialize in a wide range of construction
+                         services,
                          including residential, commercial, and industrial projects. From initial design to final
                          inspection, we work closely with our clients to understand their unique needs and vision. </p>
                  </div>
