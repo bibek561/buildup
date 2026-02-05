@@ -25,8 +25,14 @@
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
         </li>
-
+        <li class="menu-item {{ Request::segment(1) == 'contacts' ? 'active' : '' }}">
+            <a class="menu-link" href="{{ route('contacts.index') }}">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Contacts</div>
+            </a>
+        </li>
     </ul>
+
 </aside>
 
 <style>

@@ -10,7 +10,7 @@
                          <h1 class="text-anime-style-3" data-cursor="-opaque">Contact Us</h1>
                          <nav class="wow fadeInUp">
                              <ol class="breadcrumb">
-                                 <li class="breadcrumb-item"><a href="{{ route('contact') }}">home</a></li>
+                                 <li class="breadcrumb-item"><a href="{{ route('frontend.contact') }}">home</a></li>
                                  <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                              </ol>
                          </nav>
@@ -88,39 +88,47 @@
                          </div>
                          <!-- Section Title End -->
 
-                         <form id="contactForm" action="#" method="POST" data-toggle="validator">
+                         <form id="contactForm" action="{{ route('contact.store') }}" method="POST"
+                             data-toggle="validator">
+                             @csrf
+
                              <div class="row">
+                                 <!-- Name (Correct) -->
                                  <div class="form-group col-md-6 mb-3">
                                      <input type="text" name="name" class="form-control" id="name"
-                                         placeholder="Enter Your name" required="">
+                                         placeholder="Enter Your name" required>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
+                                 <!-- Email (Correct) -->
                                  <div class="form-group col-md-6 mb-3">
                                      <input type="email" name="email" class="form-control" id="email"
-                                         placeholder="Enter Your email" required="">
+                                         placeholder="Enter Your email" required>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
+                                 <!-- Phone - CHANGED from "phone" to "phone_number" -->
                                  <div class="form-group col-md-6 mb-3">
-                                     <input type="text" name="phone" class="form-control" id="phone"
-                                         placeholder="Phone number" required="">
+                                     <input type="text" name="phone_number" class="form-control" id="phone"
+                                         placeholder="Phone number" required>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
+                                 <!-- Subject (Correct) -->
                                  <div class="form-group col-md-6 mb-3">
                                      <input type="text" name="subject" class="form-control" id="subject"
-                                         placeholder="Subject" required="">
+                                         placeholder="Subject" required>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
+                                 <!-- Message - CHANGED from "msg" to "message" -->
                                  <div class="form-group col-md-12 mb-4">
-                                     <textarea name="msg" class="form-control" id="msg" rows="3" placeholder="Message" required=""></textarea>
+                                     <textarea name="message" class="form-control" id="msg" rows="3" placeholder="Message" required></textarea>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
                                  <div class="col-md-12">
-                                     <button type="submit" class="btn-default">submit</button>
+                                     <button type="submit" class="btn-default">Submit</button>
                                      <div id="msgSubmit" class="h3 hidden"></div>
                                  </div>
                              </div>

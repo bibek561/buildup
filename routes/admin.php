@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\UserRegisterController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\ContactsController;
 
 Auth::routes(['register' => false]);
 
@@ -16,4 +18,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     Route::get('change-password', [AuthController::class, 'index'])->name('profile');
     Route::post('change-password', [AuthController::class, 'store'])->name('change.password');
-});
+
+    Route::resource('contacts', ContactsController::class);
+}); 

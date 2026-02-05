@@ -24,7 +24,7 @@
                                     <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog
                                             Details</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Project</a>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('project') }}">Project</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="#">Project
                                             Details</a></li>
@@ -36,13 +36,13 @@
                                 </ul>
                             </li>
                             <li class="nav-item highlighted-menu"><a class="nav-link"
-                                    href="{{ route('contact') }}">Contact
+                                    href="{{ route('frontend.contact') }}">Contact
                                     Us</a></li>
                         </ul>
                     </div>
                     <!-- Let’s Start Button Start -->
                     <div class="header-btn d-inline-flex">
-                        <a href="{{ route('contact') }}" class="btn-default">Contact Us</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn-default">Contact Us</a>
                     </div>
                     <!-- Let’s Start Button End -->
                 </div>

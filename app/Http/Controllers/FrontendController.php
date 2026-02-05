@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -22,6 +23,24 @@ class FrontendController extends Controller
     {
         return view('frontend.contact.index');
     }
+  public function storeContact(Request $request)
+    {
+        // Validate the form
+        $validated = $request->validate([
+            'name' => 'nullable',
+            'email' => 'nullable',
+            'phone_number' => 'nullable',
+            'subject' => 'nullable',
+            'message' => 'nullable',
+        ]);
+
+        // Save to database
+       Contact::create($request->all());
+
+        // Redirect back with success message
+        return redirect()->back()->with('success', 'Thank you! Your message has been sent.');
+    }
+    
     public function service()
     {
         return view('frontend.service.index');
@@ -42,5 +61,6 @@ class FrontendController extends Controller
     {
         return view('frontend.faqs.index');
     }
+    
     
 }
