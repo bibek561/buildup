@@ -31,8 +31,27 @@
                 <div data-i18n="Analytics">Contacts</div>
             </a>
         </li>
+        <li class="menu-item {{ Request::segment(2) == 'services' ? 'active open' : '' }}">
+            <a class="menu-link text-decoration-none menu-toggle" href="javascript:void(0)">
+                <i class="menu-icon tf-icons bx bx-star"></i>
+                <div data-i18n="General Setting">Services</div>
+            </a>
+            <ul class="menu-sub">
+                <li
+                    class="menu-item {{ Request::segment(2) == 'services' && Request::segment(3) == null ? 'active' : '' }}">
+                    <a class="menu-link text-decoration-none" href="{{ route('services.index') }}">
+                        <div data-i18n="Accordion">All Services</div>
+                    </a>
+                </li>
+                <li
+                    class="menu-item {{ Request::segment(2) == 'services' && Request::segment(3) == 'create' ? 'active' : '' }}">
+                    <a class="menu-link text-decoration-none" href="{{ route('services.create') }}">
+                        <div data-i18n="Accordion">Create Services</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
     </ul>
-
 </aside>
 
 <style>

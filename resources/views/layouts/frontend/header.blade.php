@@ -15,11 +15,13 @@
                         <ul class="navbar-nav mr-auto" id="menu">
                             <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">Services</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="{{ route('frontend.services') }}">Services</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
                             <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
                                 <ul>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">Service
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="{{ route('frontend.services') }}">Service
                                             Details</a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog
                                             Details</a>

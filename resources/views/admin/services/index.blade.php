@@ -5,7 +5,7 @@
     @include('admin.includes.message')
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Services ({{ $services->total() }})</h5>
+            {{-- <h5 class="mb-0">Services ({{ $services->total() }})</h5> --}}
             <small class="text-muted float-end">
                 <a class="btn btn-primary" href="{{ route('services.create') }}"><i class="fa-solid fa-plus"></i>
                     Create</a>
@@ -13,7 +13,7 @@
         </div>
 
         <div class="table-responsive text-nowrap">
-            @if (!$services->isEmpty())
+            @if (isset($services) && $services->count() > 0)
                 <table class="table">
                     <thead>
                         <tr>

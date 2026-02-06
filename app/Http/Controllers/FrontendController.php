@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Service;
 use Illuminate\Http\Request;
+
 
 class FrontendController extends Controller
 {
@@ -41,9 +43,9 @@ class FrontendController extends Controller
         return redirect()->back()->with('success', 'Thank you! Your message has been sent.');
     }
     
-    public function service()
+    public function services()
     {
-        return view('frontend.service.index');
+        return view('frontend.services.index');
     }
     public function team()
     {
@@ -61,6 +63,19 @@ class FrontendController extends Controller
     {
         return view('frontend.faqs.index');
     }
-    
-    
+   public function index()
+{
+    $services = Service::where('status', 1)
+                        ->orderBy('order', 'asc')
+                        ->get();
+
+    return view('admin.services.index', compact('services'));
 }
+
+    public function showServices($slug)
+    {
+        $services = Service::where('slug', $slug)->firstOrFail();
+        $popular_services = Service::where('status', 1)->take(5)->get();
+        return view("frontend.services.servicesShow", compact('services', 'popular_services'));
+    }
+    }
