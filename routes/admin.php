@@ -8,13 +8,14 @@ use App\Http\Controllers\Admin\ContactsController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\ServicesController;
+use App\Http\Controllers\Admin\PostController;
 
 
-    Auth::routes(['register' => false]);
+Auth::routes(['register' => false]);
 
-    Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
-    Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     Route::get('register', [UserRegisterController::class, 'index'])->name('register');
     Route::post('register', [UserRegisterController::class, 'store'])->name('store.register');
@@ -24,10 +25,7 @@ use App\Http\Controllers\Admin\ServicesController;
 
     Route::resource('contacts', ContactsController::class);
 
+    //service
     Route::resource('services', ServicesController::class);
-
-
-
-
+    Route::resource('blog', PostController::class);
 });
-

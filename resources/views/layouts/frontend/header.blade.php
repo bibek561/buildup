@@ -17,13 +17,13 @@
                             <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
                             <li class="nav-item"><a class="nav-link"
                                     href="{{ route('frontend.services') }}">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('frontend.blog') }}">Blog</a></li>
                             <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
                                 <ul>
                                     <li class="nav-item"><a class="nav-link"
                                             href="{{ route('frontend.services') }}">Service
                                             Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('frontend.blog') }}">Blog
                                             Details</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('project') }}">Project</a>
@@ -44,7 +44,7 @@
                     </div>
                     <!-- Let’s Start Button Start -->
                     <div class="header-btn d-inline-flex">
-                        <a href="{{ route('frontend.contact') }}" class="btn-default">Contact Us</a>
+                        <a class="btn-default" href="{{ route('frontend.contact') }}">Contact Us</a>
                     </div>
                     <!-- Let’s Start Button End -->
                 </div>

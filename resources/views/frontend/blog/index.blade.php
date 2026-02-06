@@ -10,7 +10,7 @@
                          <h1 class="text-anime-style-3" data-cursor="-opaque">About</h1>
                          <nav class="wow fadeInUp">
                              <ol class="breadcrumb">
-                                 <li class="breadcrumb-item"><a href="{{ route('blog') }}">home</a></li>
+                                 <li class="breadcrumb-item"><a href="{{ route('frontend.blog') }}">home</a></li>
                                  <li class="breadcrumb-item active" aria-current="page">services</li>
                              </ol>
                          </nav>
@@ -31,7 +31,7 @@
                          <!-- Post Featured Image Start-->
                          <div class="post-featured-image" data-cursor-text="View">
                              <figure>
-                                 <a href="#" class="image-anime">
+                                 <a class="image-anime" href="#">
                                      <img src="{{ asset('frontend/images/post-1.jpg') }}" alt="">
                                  </a>
                              </figure>
@@ -48,7 +48,7 @@
 
                              <!-- Post Item Footer Start-->
                              <div class="post-item-footer">
-                                 <a href="#" class="readmore-btn">read more</a>
+                                 <a class="readmore-btn" href="#">read more</a>
                              </div>
                              <!-- Post Item Footer End-->
                          </div>
@@ -63,7 +63,7 @@
                          <!-- Post Featured Image Start-->
                          <div class="post-featured-image" data-cursor-text="View">
                              <figure>
-                                 <a href="#" class="image-anime">
+                                 <a class="image-anime" href="#">
                                      <img src="{{ asset('frontend/images/post-2.jpg') }}" alt="">
                                  </a>
                              </figure>
@@ -80,7 +80,7 @@
 
                              <!-- Post Item Footer Start-->
                              <div class="post-item-footer">
-                                 <a href="#" class="readmore-btn">read more</a>
+                                 <a class="readmore-btn" href="#">read more</a>
                              </div>
                              <!-- Post Item Footer End-->
                          </div>
@@ -95,7 +95,7 @@
                          <!-- Post Featured Image Start-->
                          <div class="post-featured-image" data-cursor-text="View">
                              <figure>
-                                 <a href="#" class="image-anime">
+                                 <a class="image-anime" href="#">
                                      <img src="{{ asset('frontend/images/post-3.jpg') }}" alt="">
                                  </a>
                              </figure>
@@ -112,7 +112,7 @@
 
                              <!-- Post Item Footer Start-->
                              <div class="post-item-footer">
-                                 <a href="#" class="readmore-btn">read more</a>
+                                 <a class="readmore-btn" href="#">read more</a>
                              </div>
                              <!-- Post Item Footer End-->
                          </div>
@@ -127,7 +127,7 @@
                          <!-- Post Featured Image Start-->
                          <div class="post-featured-image" data-cursor-text="View">
                              <figure>
-                                 <a href="#" class="image-anime">
+                                 <a class="image-anime" href="#">
                                      <img src="{{ asset('frontend/images/post-4.jpg') }}" alt="">
                                  </a>
                              </figure>
@@ -144,7 +144,7 @@
 
                              <!-- Post Item Footer Start-->
                              <div class="post-item-footer">
-                                 <a href="#" class="readmore-btn">read more</a>
+                                 <a class="readmore-btn" href="#">read more</a>
                              </div>
                              <!-- Post Item Footer End-->
                          </div>
@@ -159,7 +159,7 @@
                          <!-- Post Featured Image Start-->
                          <div class="post-featured-image" data-cursor-text="View">
                              <figure>
-                                 <a href="#" class="image-anime">
+                                 <a class="image-anime" href="#">
                                      <img src="{{ asset('frontend/images/post-5.jpg') }}" alt="">
                                  </a>
                              </figure>
@@ -176,7 +176,7 @@
 
                              <!-- Post Item Footer Start-->
                              <div class="post-item-footer">
-                                 <a href="#" class="readmore-btn">read more</a>
+                                 <a class="readmore-btn" href="#">read more</a>
                              </div>
                              <!-- Post Item Footer End-->
                          </div>
@@ -191,7 +191,7 @@
                          <!-- Post Featured Image Start-->
                          <div class="post-featured-image" data-cursor-text="View">
                              <figure>
-                                 <a href="#" class="image-anime">
+                                 <a class="image-anime" href="#">
                                      <img src="{{ asset('frontend/images/post-6.jpg') }}" alt="">
                                  </a>
                              </figure>
@@ -208,7 +208,7 @@
 
                              <!-- Post Item Footer Start-->
                              <div class="post-item-footer">
-                                 <a href="#" class="readmore-btn">read more</a>
+                                 <a class="readmore-btn" href="#">read more</a>
                              </div>
                              <!-- Post Item Footer End-->
                          </div>

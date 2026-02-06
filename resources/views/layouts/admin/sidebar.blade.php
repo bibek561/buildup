@@ -51,6 +51,26 @@
                 </li>
             </ul>
         </li>
+        <li class="menu-item {{ Request::segment(2) == 'blog' ? 'active open' : '' }}">
+            <a class="menu-link text-decoration-none menu-toggle" href="javascript:void(0)">
+                <i class="menu-icon tf-icons bx bx-news"></i>
+                <div data-i18n="General Setting">Blogs</div>
+            </a>
+            <ul class="menu-sub">
+                <li
+                    class="menu-item {{ Request::segment(2) == 'blog' && Request::segment(3) == null ? 'active' : '' }}">
+                    <a class="menu-link text-decoration-none" href="{{ route('blog.index') }}">
+                        <div data-i18n="Accordion">All Blog</div>
+                    </a>
+                </li>
+                <li
+                    class="menu-item {{ Request::segment(2) == 'blog' && Request::segment(3) == 'create' ? 'active' : '' }}">
+                    <a class="menu-link text-decoration-none" href="{{ route('blog.create') }}">
+                        <div data-i18n="Accordion">Create Blog</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </aside>
 

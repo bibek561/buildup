@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Post;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -15,12 +16,12 @@ class FrontendController extends Controller
     }
     public function notFound()
     {
-    return view('frontend.notFound.index');
+        return view('frontend.notFound.index');
     }
-     public function team()
-{
-    return view('frontend.team.index');
-}
+    public function team()
+    {
+        return view('frontend.team.index');
+    }
 
     public function about()
     {
@@ -30,25 +31,21 @@ class FrontendController extends Controller
     {
         return view('frontend.project.index');
     }
-    public function blog()
-    {
-        return view('frontend.blog.index');
-    }
     public function contact()
     {
         return view('frontend.contact.index');
     }
     public function faqs()
-{
-    return view('frontend.faqs.index');
-}
+    {
+        return view('frontend.faqs.index');
+    }
 
-    public function services(){
+    public function services()
+    {
 
-    $services = Service::where('status', 1)->orderBy('order', 'asc')->get();
-       
-    return view('frontend.services.index',compact('services'));
-                        
+        $services = Service::where('status', 1)->orderBy('order', 'asc')->get();
+
+        return view('frontend.services.index', compact('services'));
     }
     public function showServices($slug)
     {
@@ -56,4 +53,15 @@ class FrontendController extends Controller
         $popular_services = Service::where('status', 1)->take(5)->get();
         return view("frontend.services.servicesShow", compact('services', 'popular_services'));
     }
+    public function blog()
+    {
+        $posts = Post::where('status', 1)->orderByRaw('ISNULL(`order`), `order` ASC')->get();
+        return view("frontend.blog.index", compact('posts'));
     }
+    public function showBlog($slug)
+    {
+        $post = Post::where('slug', $slug)->firstOrFail();
+        $popular_post = Post::where('status', 1)->orderByDesc('views')->take(5)->get();
+        return view("frontend.blog.blogShow", compact('post', 'popular_post'));
+    }
+}
