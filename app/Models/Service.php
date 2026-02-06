@@ -11,5 +11,5 @@ class Service extends Model
 {
     use  HasFactory;
     protected $table = 'services';
-    protected $fillable = ['order', 'title',  'description', 'image', 'status', 'name', 'slug', 'seo_title', 'seo_description', 'seo_keywords', 'seo_schema', 'banner_image'];
+    protected $fillable = ['order','description', 'image', 'status', 'name', 'slug', 'seo_title', 'seo_description', 'seo_keywords', 'seo_schema', 'banner_image'];
 }

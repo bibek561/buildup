@@ -39,221 +39,45 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Service Image Start -->
-                        <div class="service-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/service-img-1.jpg') }}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Service Image End -->
-
-                        <!-- Service Body Start -->
-                        <div class="service-body">
-                            <!-- Service Body Title Start -->
-                            <div class="service-body-title">
-                                <h3>building construction</h3>
+                @foreach ($services as $service)
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Service Item Start -->
+                        <div class="service-item wow fadeInUp" data-wow-delay="0.25s">
+                            <!-- Service Image Start -->
+                            <div class="service-image" data-cursor-text="View">
+                                <a href="#">
+                                    <figure>
+                                        <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->name }}">
+                                    </figure>
+                                </a>
                             </div>
-                            <!-- Service Body Title End -->
+                            <!-- Service Image End -->
 
-                            <!-- Service Content Start -->
-                            <div class="service-content">
-                                <p>Our post-construction services gives you peace of mind knowing that we are still here for
-                                    you even after.</p>
-                                <div class="service-content-footer">
-                                    <a href="#" class="readmore-btn">view more</a>
+                            <!-- Service Body Start -->
+                            <div class="service-body">
+                                <!-- Service Body Title Start -->
+                                <div class="service-body-title">
+                                    <h3>{{ $service->name ?? '' }}</h3>
                                 </div>
-                            </div>
-                            <!-- Service Content End -->
-                        </div>
-                        <!-- Service Body End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
+                                <!-- Service Body Title End -->
 
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Service Image Start -->
-                        <div class="service-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/service-img-2.jpg') }}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Service Image End -->
+                                <!-- Service Content Start -->
+                                <div class="service-content">
+                                    <p>
+                                        {{ \Illuminate\Support\Str::words(strip_tags($service->description ?? ''), 50, '...') }}
+                                    </p>
 
-                        <!-- Service Body Start -->
-                        <div class="service-body">
-                            <!-- Service Body Title Start -->
-                            <div class="service-body-title">
-                                <h3>architecture design</h3>
-                            </div>
-                            <!-- Service Body Title End -->
-
-                            <!-- Service Content Start -->
-                            <div class="service-content">
-                                <p>Our post-construction services gives you peace of mind knowing that we are still here for
-                                    you even after.</p>
-                                <div class="service-content-footer">
-                                    <a href="#" class="readmore-btn">view more</a>
+                                    <div class="service-content-footer">
+                                        <a href="#" class="readmore-btn">view more</a>
+                                    </div>
                                 </div>
+                                <!-- Service Content End -->
                             </div>
-                            <!-- Service Content End -->
+                            <!-- Service Body End -->
                         </div>
-                        <!-- Service Body End -->
+                        <!-- Service Item End -->
                     </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.75s">
-                        <!-- Service Image Start -->
-                        <div class="service-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/service-img-3.jpg') }}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Service Image End -->
-
-                        <!-- Service Body Start -->
-                        <div class="service-body">
-                            <!-- Service Body Title Start -->
-                            <div class="service-body-title">
-                                <h3>building renovation</h3>
-                            </div>
-                            <!-- Service Body Title End -->
-
-                            <!-- Service Content Start -->
-                            <div class="service-content">
-                                <p>Our post-construction services gives you peace of mind knowing that we are still here for
-                                    you even after.</p>
-                                <div class="service-content-footer">
-                                    <a href="#" class="readmore-btn">view more</a>
-                                </div>
-                            </div>
-                            <!-- Service Content End -->
-                        </div>
-                        <!-- Service Body End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1s">
-                        <!-- Service Image Start -->
-                        <div class="service-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/service-img-4.jpg') }}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Service Image End -->
-
-                        <!-- Service Body Start -->
-                        <div class="service-body">
-                            <!-- Service Body Title Start -->
-                            <div class="service-body-title">
-                                <h3>flooring & roofing</h3>
-                            </div>
-                            <!-- Service Body Title End -->
-
-                            <!-- Service Content Start -->
-                            <div class="service-content">
-                                <p>Our post-construction services gives you peace of mind knowing that we are still here for
-                                    you even after.</p>
-                                <div class="service-content-footer">
-                                    <a href="#" class="readmore-btn">view more</a>
-                                </div>
-                            </div>
-                            <!-- Service Content End -->
-                        </div>
-                        <!-- Service Body End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1.25s">
-                        <!-- Service Image Start -->
-                        <div class="service-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/service-img-5.jpg') }}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Service Image End -->
-
-                        <!-- Service Body Start -->
-                        <div class="service-body">
-                            <!-- Service Body Title Start -->
-                            <div class="service-body-title">
-                                <h3>building maintenance</h3>
-                            </div>
-                            <!-- Service Body Title End -->
-
-                            <!-- Service Content Start -->
-                            <div class="service-content">
-                                <p>Our post-construction services gives you peace of mind knowing that we are still here for
-                                    you even after.</p>
-                                <div class="service-content-footer">
-                                    <a href="#" class="readmore-btn">view more</a>
-                                </div>
-                            </div>
-                            <!-- Service Content End -->
-                        </div>
-                        <!-- Service Body End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1.5s">
-                        <!-- Service Image Start -->
-                        <div class="service-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/service-img-6.jpg') }}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Service Image End -->
-
-                        <!-- Service Body Start -->
-                        <div class="service-body">
-                            <!-- Service Body Title Start -->
-                            <div class="service-body-title">
-                                <h3>project management</h3>
-                            </div>
-                            <!-- Service Body Title End -->
-
-                            <!-- Service Content Start -->
-                            <div class="service-content">
-                                <p>Our post-construction services gives you peace of mind knowing that we are still here for
-                                    you even after.</p>
-                                <div class="service-content-footer">
-                                    <a href="#" class="readmore-btn">view more</a>
-                                </div>
-                            </div>
-                            <!-- Service Content End -->
-                        </div>
-                        <!-- Service Body End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

@@ -1,15 +1,5 @@
 @extends('layouts.frontend.master')
-@section('seo')
-    @include('frontend.seo.seo', [
-        'name' => $services->name,
-        'title' => $services->seo_title ?? $services->name,
-        'description' => $services->seo_description ?? '',
-        'keyword' => $services->seo_description ?? '',
-        'schema' => $services->seo_schema ?? '',
-        'created_at' => $services->created_at,
-        'updated_at' => $services->updated_at,
-    ])
-@endsection
+
 @section('content')
     <style>
         .bg-breadcrumb {
