@@ -11,7 +11,7 @@ Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.c
 Route::post('/contact', [FrontendController::class, 'storeContact'])->name('contact.store');
 Route::get('/services', [FrontendController::class, 'services'])->name('frontend.services');
 Route::get('/services/{slug}', [FrontendController::class, 'showServices'])->name('frontend.services.show');
-Route::get('/team', [FrontendController::class, 'team'])->name('team');
+Route::get('/team', [FrontendController::class, 'team'])->name('frontend.team');
 Route::get('/notFound', [FrontendController::class, 'notFound'])->name('notFound');
 Route::get('/faq', [FrontendController::class, 'faq'])->name('frontend.faqs');
 Route::get('/project', [FrontendController::class, 'project'])->name('frontend.project');

@@ -10,7 +10,7 @@
                         <h1 class="text-anime-style-3" data-cursor="-opaque">Our Team</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ route('team') }}">home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('frontend.team') }}">home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">team</li>
                             </ol>
                         </nav>

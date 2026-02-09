@@ -8,6 +8,7 @@ use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Project;
+use App\Model\Team;
 use Illuminate\Http\Request;
 
 
@@ -49,6 +50,13 @@ class FrontendController extends Controller
             ->orderBy('order', 'asc')
             ->get();
         return view("frontend.faq.index", compact('faqs'));
+    }
+    public function team()
+    {
+        $team = Team::where('status', 1)
+            ->orderBy('order', 'asc')
+            ->get();
+        return view("frontend.team.index", compact('team'));
     }
     public function services()
     {
