@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreContactRequest;
 use App\Models\Contact;
 use App\Models\Post;
 use App\Models\Service;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 
@@ -27,13 +29,18 @@ class FrontendController extends Controller
     {
         return view('frontend.about.index');
     }
-    public function project()
-    {
-        return view('frontend.project.index');
-    }
     public function contact()
     {
         return view('frontend.contact.index');
+    }
+    public function storeContact(StoreContactRequest $request)
+    {
+        Contact::create($request->validated());
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Your message has been sent successfully!',
+        ]);
     }
     public function faqs()
     {
@@ -55,7 +62,7 @@ class FrontendController extends Controller
     }
     public function blog()
     {
-        $posts = Post::where('status', 1)->orderByRaw('ISNULL(`order`), `order` ASC')->get();
+        $posts = Post::where('status', 1)->orderBy('order', 'asc')->get();
         return view("frontend.blog.index", compact('posts'));
     }
     public function showBlog($slug)
@@ -63,5 +70,18 @@ class FrontendController extends Controller
         $post = Post::where('slug', $slug)->firstOrFail();
         $popular_post = Post::where('status', 1)->orderByDesc('views')->take(5)->get();
         return view("frontend.blog.blogShow", compact('post', 'popular_post'));
+    }
+    public function project()
+    {
+
+        $project = Project::where('status', 1)->orderBy('order', 'asc')->get();
+
+        return view('frontend.project.index', compact('project'));
+    }
+    public function showProject($slug)
+    {
+        $project = Project::where('slug', $slug)->firstOrFail();
+        $popular_project = Project::where('status', 1)->take(5)->get();
+        return view("frontend.project.projectShow", compact('project', 'popular_project'));
     }
 }

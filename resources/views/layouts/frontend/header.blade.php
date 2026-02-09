@@ -21,15 +21,8 @@
                             <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
                                 <ul>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="{{ route('frontend.services') }}">Service
-                                            Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('frontend.blog') }}">Blog
-                                            Details</a>
+                                            href="{{ route('frontend.project') }}">Project</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('project') }}">Project</a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Project
-                                            Details</a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('team') }}">Our Team</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('faqs') }}">FAQ</a></li>

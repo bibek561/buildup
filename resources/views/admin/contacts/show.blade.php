@@ -29,7 +29,7 @@
                         </tr>
                         <tr>
                             <td>Phone</td>
-                            <td>{{ $contact->number }}</td>
+                            <td>{{ $contact->phone_number }}</td>
                         </tr>
                         <tr>
                             <td>Email</td>
@@ -37,7 +37,7 @@
                         </tr>
                         <tr>
                             <td>Subject</td>
-                            <td>{!! $contact->course !!}</td>
+                            <td>{!! $contact->subject !!}</td>
                         </tr>
                         <tr>
                             <td>Message</td>

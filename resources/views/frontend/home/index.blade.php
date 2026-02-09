@@ -17,8 +17,8 @@
                         </div>
 
                         <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
-                            <a href="#" class="btn-default">get started</a>
-                            <a href="#" class="btn-default btn-highlighted">view Projects</a>
+                            <a class="btn-default" href="#">get started</a>
+                            <a class="btn-default btn-highlighted" href="#">view Projects</a>
                         </div>
                     </div>
                     <!-- Hero Content End -->
@@ -72,7 +72,7 @@
                         <!-- About Content Footer Start -->
                         <div class="about-content-footer wow fadeInUp" data-wow-delay="0.75s">
                             <div class="about-footer-btn">
-                                <a href="#" class="btn-default">get free quote</a>
+                                <a class="btn-default" href="#">get free quote</a>
                             </div>
                             <div class="about-contact-support">
                                 <div class="icon-box">
@@ -136,7 +136,7 @@
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
                                     <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn" href="#">view more</a>
                                     </div>
                                 </div>
                                 <!-- Service Content End -->
@@ -172,7 +172,7 @@
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
                                     <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn" href="#">view more</a>
                                     </div>
                                 </div>
                                 <!-- Service Content End -->
@@ -208,7 +208,7 @@
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
                                     <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn" href="#">view more</a>
                                     </div>
                                 </div>
                                 <!-- Service Content End -->
@@ -244,7 +244,7 @@
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
                                     <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn" href="#">view more</a>
                                     </div>
                                 </div>
                                 <!-- Service Content End -->
@@ -256,7 +256,7 @@
 
                     <!-- Services Footer Btn Start -->
                     <div class="service-footer-btn wow fadeInUp" data-wow-delay="1.25s">
-                        <a href="#" class="btn-default">view all services</a>
+                        <a class="btn-default" href="#">view all services</a>
                     </div>
                     <!-- Services Footer Btn End -->
                 </div>
@@ -419,7 +419,7 @@
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
                                     <div class="project-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn" href="#">view more</a>
                                     </div>
                                 </div>
                                 <!-- Project Content End -->
@@ -456,7 +456,7 @@
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
                                     <div class="project-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn" href="#">view more</a>
                                     </div>
                                 </div>
                                 <!-- Project Content End -->
@@ -492,7 +492,7 @@
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
                                     <div class="project-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn" href="#">view more</a>
                                     </div>
                                 </div>
                                 <!-- Project Content End -->
@@ -528,7 +528,7 @@
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
                                     <div class="project-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn" href="#">view more</a>
                                     </div>
                                 </div>
                                 <!-- Project Content End -->
@@ -540,7 +540,7 @@
 
                     <!-- Services Footer Btn Start -->
                     <div class="project-footer-btn wow fadeInUp" data-wow-delay="1.25s">
-                        <a href="#" class="btn-default">view all projects</a>
+                        <a class="btn-default" href="#">view all projects</a>
                     </div>
                     <!-- Services Footer Btn End -->
                 </div>
@@ -564,7 +564,7 @@
 
                     <!-- Section Btn Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a href="#" class="btn-default btn-large">get free quote</a>
+                        <a class="btn-default btn-large" href="#">get free quote</a>
                     </div>
                     <!-- Section Btn End -->
                 </div>
@@ -826,13 +826,13 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.25s">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    type="button" aria-expanded="true" aria-controls="collapseOne">
                                     Do you offer a free, no obligation quotation?
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordion">
+                            <div class="accordion-collapse collapse show" id="collapseOne" data-bs-parent="#accordion"
+                                aria-labelledby="headingOne">
                                 <div class="accordion-body">
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
@@ -844,13 +844,14 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" type="button" aria-expanded="false"
+                                    aria-controls="collapseTwo">
                                     What services do you offer?
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordion">
+                            <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#accordion"
+                                aria-labelledby="headingTwo">
                                 <div class="accordion-body">
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
@@ -862,13 +863,14 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.75s">
                             <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" type="button" aria-expanded="false"
+                                    aria-controls="collapseThree">
                                     What types of projects do you specialize in?
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordion">
+                            <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#accordion"
+                                aria-labelledby="headingThree">
                                 <div class="accordion-body">
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
@@ -880,13 +882,14 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="1s">
                             <h2 class="accordion-header" id="headingfour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsefour" type="button" aria-expanded="false"
+                                    aria-controls="collapsefour">
                                     How do I start a project with your company?
                                 </button>
                             </h2>
-                            <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
-                                data-bs-parent="#accordion">
+                            <div class="accordion-collapse collapse" id="collapsefour" data-bs-parent="#accordion"
+                                aria-labelledby="headingfour">
                                 <div class="accordion-body">
                                     <p>Our post-construction services gives you peace of mind knowing that we are still here
                                         for you even after.</p>
@@ -925,7 +928,7 @@
                         <!-- Post Featured Image Start-->
                         <div class="post-featured-image" data-cursor-text="View">
                             <figure>
-                                <a href="#" class="image-anime">
+                                <a class="image-anime" href="#">
                                     <img src="{{ asset('frontend/images/post-1.jpg') }}" alt="">
                                 </a>
                             </figure>
@@ -942,7 +945,7 @@
 
                             <!-- Post Item Footer Start-->
                             <div class="post-item-footer">
-                                <a href="#" class="readmore-btn">read more</a>
+                                <a class="readmore-btn" href="#">read more</a>
                             </div>
                             <!-- Post Item Footer End-->
                         </div>
@@ -957,7 +960,7 @@
                         <!-- Post Featured Image Start-->
                         <div class="post-featured-image" data-cursor-text="View">
                             <figure>
-                                <a href="#" class="image-anime">
+                                <a class="image-anime" href="#">
                                     <img src="{{ asset('frontend/images/post-2.jpg') }}" alt="">
                                 </a>
                             </figure>
@@ -974,7 +977,7 @@
 
                             <!-- Post Item Footer Start-->
                             <div class="post-item-footer">
-                                <a href="#" class="readmore-btn">read more</a>
+                                <a class="readmore-btn" href="#">read more</a>
                             </div>
                             <!-- Post Item Footer End-->
                         </div>
@@ -989,7 +992,7 @@
                         <!-- Post Featured Image Start-->
                         <div class="post-featured-image" data-cursor-text="View">
                             <figure>
-                                <a href="#" class="image-anime">
+                                <a class="image-anime" href="#">
                                     <img src="{{ asset('frontend/images/post-3.jpg') }}" alt="">
                                 </a>
                             </figure>
@@ -1006,7 +1009,7 @@
 
                             <!-- Post Item Footer Start-->
                             <div class="post-item-footer">
-                                <a href="#" class="readmore-btn">read more</a>
+                                <a class="readmore-btn" href="#">read more</a>
                             </div>
                             <!-- Post Item Footer End-->
                         </div>
@@ -1071,40 +1074,40 @@
                         </div>
                         <!-- Section Title End -->
 
-                        <form id="contactForm" action="#" method="POST" data-toggle="validator">
+                        <form id="contactForm" data-toggle="validator" action="#" method="POST">
                             <div class="row">
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="name" class="form-control" id="name"
+                                    <input class="form-control" id="name" type="text" name="name"
                                         placeholder="Enter Your name" required="">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="email" name="email" class="form-control" id="email"
+                                    <input class="form-control" id="email" type="email" name="email"
                                         placeholder="Enter Your email" required="">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="phone" class="form-control" id="phone"
+                                    <input class="form-control" id="phone" type="text" name="phone"
                                         placeholder="Phone number" required="">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="website" class="form-control" id="website"
+                                    <input class="form-control" id="website" type="text" name="website"
                                         placeholder="Subject" required="">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group col-md-12 mb-5">
-                                    <textarea name="msg" class="form-control" id="msg" rows="3" placeholder="Message" required=""></textarea>
+                                    <textarea class="form-control" id="msg" name="msg" rows="3" placeholder="Message" required=""></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn-default">submit</button>
-                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                    <button class="btn-default" type="submit">submit</button>
+                                    <div class="h3 hidden" id="msgSubmit"></div>
                                 </div>
                             </div>
                         </form>

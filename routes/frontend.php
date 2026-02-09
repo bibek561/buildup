@@ -14,4 +14,5 @@ Route::get('/services/{slug}', [FrontendController::class, 'showServices'])->nam
 Route::get('/team', [FrontendController::class, 'team'])->name('team');
 Route::get('/notFound', [FrontendController::class, 'notFound'])->name('notFound');
 Route::get('/faqs', [FrontendController::class, 'faqs'])->name('faqs');
-Route::get('/project', [FrontendController::class, 'project'])->name('project');
+Route::get('/project', [FrontendController::class, 'project'])->name('frontend.project');
+Route::get('/project/{slug}', [FrontendController::class, 'showproject'])->name('frontend.project.show');

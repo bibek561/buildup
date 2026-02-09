@@ -50,6 +50,25 @@
                     </a>
                 </li>
             </ul>
+        <li class="menu-item {{ Request::segment(2) == 'services' ? 'active open' : '' }}">
+            <a class="menu-link text-decoration-none menu-toggle" href="javascript:void(0)">
+                <i class="menu-icon tf-icons bx bx-star"></i>
+                <div data-i18n="General Setting">Project</div>
+            </a>
+            <ul class="menu-sub">
+                <li
+                    class="menu-item {{ Request::segment(2) == 'services' && Request::segment(3) == null ? 'active' : '' }}">
+                    <a class="menu-link text-decoration-none" href="{{ route('project.index') }}">
+                        <div data-i18n="Accordion">All Project</div>
+                    </a>
+                </li>
+                <li
+                    class="menu-item {{ Request::segment(2) == 'services' && Request::segment(3) == 'create' ? 'active' : '' }}">
+                    <a class="menu-link text-decoration-none" href="{{ route('project.create') }}">
+                        <div data-i18n="Accordion">Create Project</div>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class="menu-item {{ Request::segment(2) == 'blog' ? 'active open' : '' }}">
             <a class="menu-link text-decoration-none menu-toggle" href="javascript:void(0)">

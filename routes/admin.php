@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\PostController;
-
+use App\Http\Controllers\Admin\ProjectController;
 
 Auth::routes(['register' => false]);
 
@@ -27,5 +27,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     //service
     Route::resource('services', ServicesController::class);
+
     Route::resource('blog', PostController::class);
+    
+    Route::resource('project', ProjectController::class);
 });

@@ -68,7 +68,9 @@
                                     </p>
 
                                     <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
+                                        <a class="readmore-btn"
+                                            href="{{ route('frontend.services.show', ['slug' => $service->slug]) }}">view
+                                            more</a>
                                     </div>
                                 </div>
                                 <!-- Service Content End -->
@@ -163,7 +165,7 @@
 
                     <!-- Section Btn Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a href="#" class="btn-default btn-large">get free quote</a>
+                        <a class="btn-default btn-large" href="#">get free quote</a>
                     </div>
                     <!-- Section Btn End -->
                 </div>
