@@ -90,6 +90,12 @@
                 </li>
             </ul>
         </li>
+        <li class="menu-item {{ Request::segment(2) == 'faq' ? 'active open' : '' }}">
+            <a class="menu-link text-decoration-none" id="slider-link" href="{{ route('faq.index') }}">
+                <i class="menu-icon tf-icons bx bx-question-mark"></i>
+                <div data-i18n="General Setting">Faq</div>
+            </a>
+        </li>
     </ul>
 </aside>
 

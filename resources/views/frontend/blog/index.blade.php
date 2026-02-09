@@ -26,7 +26,6 @@
     <div class="page-blog">
         <div class="container">
             <div class="row">
-
                 @foreach ($posts as $post)
                     <div class="col-lg-4 col-md-6">
                         <div class="blog-item wow fadeInUp">

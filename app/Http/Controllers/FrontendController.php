@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreContactRequest;
 use App\Models\Contact;
+use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Project;
@@ -44,9 +45,11 @@ class FrontendController extends Controller
     }
     public function faqs()
     {
-        return view('frontend.faqs.index');
+        $faqs = Faq::where('status', 1)
+            ->orderBy('order', 'asc')
+            ->get();
+        return view("frontend.faq.index", compact('faqs'));
     }
-
     public function services()
     {
 

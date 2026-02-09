@@ -43,7 +43,7 @@
     <!-- Jquery Library File -->
     <script src="{{ asset('frontend/js/jquery-3.7.1.min.js') }}"></script>
     <!-- Bootstrap js file -->
-    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Validator js file -->
     <script src="{{ asset('frontend/js/validator.min.js') }}"></script>
     <!-- SlickNav js file -->

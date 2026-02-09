@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\FaqController;
 
 Auth::routes(['register' => false]);
 
@@ -31,4 +32,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('blog', PostController::class);
     
     Route::resource('project', ProjectController::class);
+
+    Route::resource('faq', FaqController::class);
+
+
 });

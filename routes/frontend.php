@@ -13,6 +13,6 @@ Route::get('/services', [FrontendController::class, 'services'])->name('frontend
 Route::get('/services/{slug}', [FrontendController::class, 'showServices'])->name('frontend.services.show');
 Route::get('/team', [FrontendController::class, 'team'])->name('team');
 Route::get('/notFound', [FrontendController::class, 'notFound'])->name('notFound');
-Route::get('/faqs', [FrontendController::class, 'faqs'])->name('faqs');
+Route::get('/faq', [FrontendController::class, 'faq'])->name('frontend.faqs');
 Route::get('/project', [FrontendController::class, 'project'])->name('frontend.project');
 Route::get('/project/{slug}', [FrontendController::class, 'showproject'])->name('frontend.project.show');
