@@ -1,5 +1,34 @@
  @extends('layouts.frontend.master')
  @section('content')
+     <style>
+         .simple-breadcrumb {
+             display: flex;
+             justify-content: center;
+             /* center horizontally */
+             align-items: center;
+             gap: 8px;
+             margin-top: -25px;
+             font-size: 16px;
+         }
+
+         .simple-breadcrumb a {
+             text-decoration: none;
+             color: #fff;
+         }
+
+         .simple-breadcrumb a:hover {
+             text-decoration: underline;
+         }
+
+         .simple-breadcrumb .arrow {
+             color: #aaa;
+         }
+
+         .simple-breadcrumb .current {
+             color: #fff;
+             font-weight: 500;
+         }
+     </style>
      <!-- Page Header Start -->
      <div class="page-header parallaxie">
          <div class="container">
@@ -7,12 +36,11 @@
                  <div class="col-lg-12">
                      <!-- Page Header Box Start -->
                      <div class="page-header-box">
-                         <h1 class="text-anime-style-3" data-cursor="-opaque">Contact Us</h1>
-                         <nav class="wow fadeInUp">
-                             <ol class="breadcrumb">
-                                 <li class="breadcrumb-item"><a href="{{ route('frontend.contact') }}">home</a></li>
-                                 <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-                             </ol>
+                         <h1 class="text-anime-style-3" data-cursor="-opaque">Contact</h1>
+                         <nav class="simple-breadcrumb" aria-label="breadcrumb">
+                             <a href="{{ route('home') }}">Home</a>
+                             <span class="arrow">›</span>
+                             <span class="current">Contact</span>
                          </nav>
                      </div>
                      <!-- Page Header Box End -->
@@ -88,48 +116,48 @@
                          </div>
                          <!-- Section Title End -->
 
-                         <form id="contactForm" action="{{ route('contact.store') }}" method="POST"
-                             data-toggle="validator">
+                         <form id="contactForm" data-toggle="validator" action="{{ route('contact.store') }}"
+                             method="POST">
                              @csrf
 
                              <div class="row">
                                  <!-- Name (Correct) -->
                                  <div class="form-group col-md-6 mb-3">
-                                     <input type="text" name="name" class="form-control" id="name"
+                                     <input class="form-control" id="name" type="text" name="name"
                                          placeholder="Enter Your name" required>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
                                  <!-- Email (Correct) -->
                                  <div class="form-group col-md-6 mb-3">
-                                     <input type="email" name="email" class="form-control" id="email"
+                                     <input class="form-control" id="email" type="email" name="email"
                                          placeholder="Enter Your email" required>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
                                  <!-- Phone - CHANGED from "phone" to "phone_number" -->
                                  <div class="form-group col-md-6 mb-3">
-                                     <input type="text" name="phone_number" class="form-control" id="phone"
+                                     <input class="form-control" id="phone" type="text" name="phone_number"
                                          placeholder="Phone number" required>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
                                  <!-- Subject (Correct) -->
                                  <div class="form-group col-md-6 mb-3">
-                                     <input type="text" name="subject" class="form-control" id="subject"
+                                     <input class="form-control" id="subject" type="text" name="subject"
                                          placeholder="Subject" required>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
                                  <!-- Message - CHANGED from "msg" to "message" -->
                                  <div class="form-group col-md-12 mb-4">
-                                     <textarea name="message" class="form-control" id="msg" rows="3" placeholder="Message" required></textarea>
+                                     <textarea class="form-control" id="msg" name="message" rows="3" placeholder="Message" required></textarea>
                                      <div class="help-block with-errors"></div>
                                  </div>
 
                                  <div class="col-md-12">
-                                     <button type="submit" class="btn-default">Submit</button>
-                                     <div id="msgSubmit" class="h3 hidden"></div>
+                                     <button class="btn-default" type="submit">Submit</button>
+                                     <div class="h3 hidden" id="msgSubmit"></div>
                                  </div>
                              </div>
                          </form>

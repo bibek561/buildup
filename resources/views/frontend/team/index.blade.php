@@ -1,5 +1,34 @@
 @extends('layouts.frontend.master')
 @section('content')
+    <style>
+        .simple-breadcrumb {
+            display: flex;
+            justify-content: center;
+            /* center horizontally */
+            align-items: center;
+            gap: 8px;
+            margin-top: -25px;
+            font-size: 16px;
+        }
+
+        .simple-breadcrumb a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .simple-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .simple-breadcrumb .arrow {
+            color: #aaa;
+        }
+
+        .simple-breadcrumb .current {
+            color: #fff;
+            font-weight: 500;
+        }
+    </style>
     <!-- Page Header Start -->
     <div class="page-header parallaxie">
         <div class="container">
@@ -7,12 +36,11 @@
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Our Team</h1>
-                        <nav class="wow fadeInUp">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ route('frontend.team') }}">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">team</li>
-                            </ol>
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">Team</h1>
+                        <nav class="simple-breadcrumb" aria-label="breadcrumb">
+                            <a href="{{ route('home') }}">Home</a>
+                            <span class="arrow">›</span>
+                            <span class="current">Team</span>
                         </nav>
                     </div>
                     <!-- Page Header Box End -->
@@ -26,233 +54,71 @@
     <div class="page-team">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/team-1.jpg') }}" alt="">
-                            </figure>
-                        </div>
-                        <!-- Team Image End -->
 
-                        <!-- Team Body Start -->
-                        <div class="team-body">
-                            <!-- Team content Start -->
-                            <div class="team-content">
-                                <h3>benjamin miller</h3>
-                                <p>project manager</p>
+                @foreach ($team as $member)
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Team Member Item Start -->
+                        <div class="team-member-item wow fadeInUp">
+                            <!-- Team Image Start -->
+                            <div class="team-image">
+                                <figure class="image-anime">
+                                    <img src="{{ asset('storage/' . $member->image) }}" alt="{{ $member->name }}">
+                                </figure>
                             </div>
-                            <!-- Team content End -->
+                            <!-- Team Image End -->
 
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                </ul>
+                            <!-- Team Body Start -->
+                            <div class="team-body">
+                                <!-- Team content Start -->
+                                <div class="team-content">
+                                    <h3>{{ $member->name }}</h3>
+                                    <p>{{ $member->position }}</p>
+                                </div>
+                                <!-- Team content End -->
+
+                                <!-- Team Social Icon Start -->
+                                <div class="team-social-icon">
+                                    <ul>
+                                        {{-- show only if links exist --}}
+                                        @if (!empty($member->facebook))
+                                            <li>
+                                                <a class="social-icon" href="{{ $member->facebook }}" target="_blank">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                        @endif
+
+                                        @if (!empty($member->twitter))
+                                            <li>
+                                                <a class="social-icon" href="{{ $member->twitter }}" target="_blank">
+                                                    <i class="fa-brands fa-x-twitter"></i>
+                                                </a>
+                                            </li>
+                                        @endif
+
+                                        @if (!empty($member->instagram))
+                                            <li>
+                                                <a class="social-icon" href="{{ $member->instagram }}" target="_blank">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </div>
+                                <!-- Team Social Icon End -->
                             </div>
-                            <!-- Team Social Icon End -->
+                            <!-- Team Body End -->
                         </div>
-                        <!-- Team Body End -->
+                        <!-- Team Member Item End -->
                     </div>
-                    <!-- Team Member Item End -->
-                </div>
+                @endforeach
 
-                <div class="col-lg-4 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/team-2.jpg') }}" alt="">
-                            </figure>
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Team Body Start -->
-                        <div class="team-body">
-                            <!-- Team content Start -->
-                            <div class="team-content">
-                                <h3>jane smith</h3>
-                                <p>lead architect</p>
-                            </div>
-                            <!-- Team content End -->
-
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                        </div>
-                        <!-- Team Body End -->
+                @if ($team->isEmpty())
+                    <div class="col-12 text-center">
+                        <p>No team members found.</p>
                     </div>
-                    <!-- Team Member Item End -->
-                </div>
+                @endif
 
-                <div class="col-lg-4 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/team-3.jpg') }}" alt="">
-                            </figure>
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Team Body Start -->
-                        <div class="team-body">
-                            <!-- Team content Start -->
-                            <div class="team-content">
-                                <h3>mike johnson</h3>
-                                <p>chief engineer</p>
-                            </div>
-                            <!-- Team content End -->
-
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                        </div>
-                        <!-- Team Body End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.75s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/team-4.jpg') }}" alt="">
-                            </figure>
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Team Body Start -->
-                        <div class="team-body">
-                            <!-- Team content Start -->
-                            <div class="team-content">
-                                <h3>john doe</h3>
-                                <p>site supervisor</p>
-                            </div>
-                            <!-- Team content End -->
-
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                        </div>
-                        <!-- Team Body End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="1s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/team-5.jpg') }}" alt="">
-                            </figure>
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Team Body Start -->
-                        <div class="team-body">
-                            <!-- Team content Start -->
-                            <div class="team-content">
-                                <h3>david brown</h3>
-                                <p>Safety Officer</p>
-                            </div>
-                            <!-- Team content End -->
-
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                        </div>
-                        <!-- Team Body End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="1.25s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/team-6.jpg') }}" alt="">
-                            </figure>
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Team Body Start -->
-                        <div class="team-body">
-                            <!-- Team content Start -->
-                            <div class="team-content">
-                                <h3>susan wilson</h3>
-                                <p>structural engineer</p>
-                            </div>
-                            <!-- Team content End -->
-
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                        </div>
-                        <!-- Team Body End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
             </div>
         </div>
     </div>

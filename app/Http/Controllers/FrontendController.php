@@ -8,7 +8,7 @@ use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Project;
-use App\Model\Team;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 
@@ -22,11 +22,6 @@ class FrontendController extends Controller
     {
         return view('frontend.notFound.index');
     }
-    public function team()
-    {
-        return view('frontend.team.index');
-    }
-
     public function about()
     {
         return view('frontend.about.index');

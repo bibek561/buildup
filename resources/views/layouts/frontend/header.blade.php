@@ -23,9 +23,9 @@
                                     <li class="nav-item"><a class="nav-link"
                                             href="{{ route('frontend.project') }}">Project</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('team') }}">Our Team</a>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('frontend.team') }}">Our Team</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('faqs') }}">FAQ</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('frontend.faqs') }}">FAQ</a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('notFound') }}">404</a>
                                     </li>
                                 </ul>

@@ -1,23 +1,48 @@
 @extends('layouts.frontend.master')
 
 @section('content')
-    <!-- Page Header Start -->
-    <div class="page-header parallaxie">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">
-                            Frequently Asked Questions
-                        </h1>
-                        <nav class="wow fadeInUp">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a href="{{ route('home') }}">home</a>
-                                </li>
-                                <li class="breadcrumb-item active">faqs</li>
-                            </ol>
-                        </nav>
+    <style>
+         .simple-breadcrumb {
+             display: flex;
+             justify-content: center;
+             /* center horizontally */
+             align-items: center;
+             gap: 8px;
+             margin-top: -25px;
+             font-size: 16px;
+         }
+
+         .simple-breadcrumb a {
+             text-decoration: none;
+             color: #fff;
+         }
+
+         .simple-breadcrumb a:hover {
+             text-decoration: underline;
+         }
+
+         .simple-breadcrumb .arrow {
+             color: #aaa;
+         }
+
+         .simple-breadcrumb .current {
+             color: #fff;
+             font-weight: 500;
+         }
+     </style>
+     <!-- Page Header Start -->
+     <div class="page-header parallaxie">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     <!-- Page Header Box Start -->
+                     <div class="page-header-box">
+                         <h1 class="text-anime-style-3" data-cursor="-opaque">FAQ</h1>
+                         <nav class="simple-breadcrumb" aria-label="breadcrumb">
+                             <a href="{{ route('home') }}">Home</a>
+                             <span class="arrow">›</span>
+                             <span class="current">FAQ</span>
+                         </nav>
                     </div>
                 </div>
             </div>

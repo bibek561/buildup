@@ -31,12 +31,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('services', ServicesController::class);
 
     Route::resource('blog', PostController::class);
-    
+
     Route::resource('project', ProjectController::class);
 
     Route::resource('faq', FaqController::class);
 
     Route::resource('team', TeamController::class);
-
-
 });

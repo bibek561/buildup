@@ -1,5 +1,34 @@
  @extends('layouts.frontend.master')
  @section('content')
+     <style>
+         .simple-breadcrumb {
+             display: flex;
+             justify-content: center;
+             /* center horizontally */
+             align-items: center;
+             gap: 8px;
+             margin-top: -25px;
+             font-size: 16px;
+         }
+
+         .simple-breadcrumb a {
+             text-decoration: none;
+             color: #fff;
+         }
+
+         .simple-breadcrumb a:hover {
+             text-decoration: underline;
+         }
+
+         .simple-breadcrumb .arrow {
+             color: #aaa;
+         }
+
+         .simple-breadcrumb .current {
+             color: #fff;
+             font-weight: 500;
+         }
+     </style>
      <!-- Page Header Start -->
      <div class="page-header parallaxie">
          <div class="container">
@@ -8,12 +37,12 @@
                      <!-- Page Header Box Start -->
                      <div class="page-header-box">
                          <h1 class="text-anime-style-3" data-cursor="-opaque">About</h1>
-                         <nav class="wow fadeInUp">
-                             <ol class="breadcrumb">
-                                 <li class="breadcrumb-item"><a href="{{ route('home') }}">home</a></li>
-                                 <li class="breadcrumb-item active" aria-current="page">About</li>
-                             </ol>
+                         <nav class="simple-breadcrumb" aria-label="breadcrumb">
+                             <a href="{{ route('home') }}">Home</a>
+                             <span class="arrow">›</span>
+                             <span class="current">About</span>
                          </nav>
+
                      </div>
                      <!-- Page Header Box End -->
                  </div>
@@ -65,7 +94,7 @@
                          <!-- About Content Footer Start -->
                          <div class="about-us-content-footer wow fadeInUp" data-wow-delay="0.75s">
                              <div class="about-us-footer-btn">
-                                 <a href="#" class="btn-default">get free quote</a>
+                                 <a class="btn-default" href="#">get free quote</a>
                              </div>
                              <div class="about-us-contact-support">
                                  <div class="icon-box">
@@ -216,7 +245,7 @@
                      <div class="intro-video-box" data-cursor-text="Play">
                          <!-- Video Image Start -->
                          <div class="video-image">
-                             <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video">
+                             <a class="popup-video" href="https://www.youtube.com/watch?v=Y-x0efG1seA">
                                  <figure class="image-anime">
                                      <img src="{{ asset('frontend/images/video-bg.jpg') }}" alt="">
                                  </figure>
@@ -226,7 +255,7 @@
 
                          <!-- Video Play Button Start -->
                          <div class="video-play-button">
-                             <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video">
+                             <a class="popup-video" href="https://www.youtube.com/watch?v=Y-x0efG1seA">
                                  <i class="fa-solid fa-play"></i>
                              </a>
                          </div>
@@ -321,7 +350,7 @@
 
                      <!-- Section Btn Start -->
                      <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                         <a href="#" class="btn-default btn-large">get free quote</a>
+                         <a class="btn-default btn-large" href="#">get free quote</a>
                      </div>
                      <!-- Section Btn End -->
                  </div>
@@ -378,11 +407,11 @@
                              <!-- Team Social Icon Start -->
                              <div class="team-social-icon">
                                  <ul>
-                                     <li><a href="#" class="social-icon"><i
+                                     <li><a class="social-icon" href="#"><i
                                                  class="fa-brands fa-facebook-f"></i></a></li>
-                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                     <li><a class="social-icon" href="#"><i class="fa-brands fa-x-twitter"></i></a>
                                      </li>
-                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                                     <li><a class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
                                      </li>
                                  </ul>
                              </div>
@@ -416,11 +445,11 @@
                              <!-- Team Social Icon Start -->
                              <div class="team-social-icon">
                                  <ul>
-                                     <li><a href="#" class="social-icon"><i
+                                     <li><a class="social-icon" href="#"><i
                                                  class="fa-brands fa-facebook-f"></i></a></li>
-                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                     <li><a class="social-icon" href="#"><i class="fa-brands fa-x-twitter"></i></a>
                                      </li>
-                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                                     <li><a class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
                                      </li>
                                  </ul>
                              </div>
@@ -454,11 +483,11 @@
                              <!-- Team Social Icon Start -->
                              <div class="team-social-icon">
                                  <ul>
-                                     <li><a href="#" class="social-icon"><i
+                                     <li><a class="social-icon" href="#"><i
                                                  class="fa-brands fa-facebook-f"></i></a></li>
-                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                     <li><a class="social-icon" href="#"><i class="fa-brands fa-x-twitter"></i></a>
                                      </li>
-                                     <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                                     <li><a class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
                                      </li>
                                  </ul>
                              </div>

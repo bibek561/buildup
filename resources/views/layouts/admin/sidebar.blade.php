@@ -96,13 +96,14 @@
                 <div data-i18n="General Setting">Faq</div>
             </a>
         </li>
-    </ul>
-    <li class="menu-item {{ Request::segment(2) == 'faq' ? 'active open' : '' }}">
+        <li class="menu-item {{ Request::segment(2) == 'team' ? 'active open' : '' }}">
             <a class="menu-link text-decoration-none" id="slider-link" href="{{ route('team.index') }}">
-                <i class="menu-icon tf-icons bx bx-question-mark"></i>
+                <i class="menu-icon tf-icons bx bx-group"></i>
                 <div data-i18n="General Setting">Team</div>
             </a>
         </li>
+    </ul>
+
     </ul>
 </aside>
 
