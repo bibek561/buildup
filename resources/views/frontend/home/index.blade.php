@@ -591,9 +591,13 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">testimonials</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">What people are saying about us</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">We specialize in a wide range of construction
-                            services, including residential, commercial, and industrial projects.</p>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">
+                            What people are saying about us
+                        </h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.25s">
+                            We specialize in a wide range of construction
+                            services, including residential, commercial, and industrial projects.
+                        </p>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -605,141 +609,39 @@
                     <div class="testimonial-slider">
                         <div class="swiper">
                             <div class="swiper-wrapper" data-cursor-text="Drag">
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-header">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <p>We specialize in a wide range of construction services, including
-                                                    residential, commercial, and industrial projects. From initial design to
-                                                    final inspection, we work closely with our clients to understand their
-                                                    unique needs and vision.</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-body">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="{{ asset('frontend/images/author-1.jpg') }}"
-                                                        alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="author-content">
-                                                <h3>johan duo</h3>
-                                                <p>project manager</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
 
                                 <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-header">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
+                                @foreach ($reviews as $review)
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-header">
+                                                <div class="testimonial-rating">
+                                                    @for ($i = 1; $i <= 5; $i++)
+                                                        <i class="fa-solid fa-star"></i>
+                                                    @endfor
+                                                </div>
+                                                <div class="testimonial-content">
+                                                    <p>{{ strip_tags($review->description ?? '') }}</p>
+
+                                                </div>
                                             </div>
-                                            <div class="testimonial-content">
-                                                <p>We specialize in a wide range of construction services, including
-                                                    residential, commercial, and industrial projects. From initial design to
-                                                    final inspection, we work closely with our clients to understand their
-                                                    unique needs and vision.</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-body">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="{{ asset('frontend/images/author-2.jpg') }}"
-                                                        alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="author-content">
-                                                <h3>Jane Smith</h3>
-                                                <p>interior designer</p>
+                                            <div class="testimonial-body">
+                                                <div class="author-image">
+                                                    <figure class="image-anime">
+                                                        <img src="{{ $review->image ? asset('storage/' . $review->image) : asset('frontend/images/author-1.jpg') }}"
+                                                            alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="author-content">
+                                                    <h3>{{ $review->name }}</h3>
+                                                    <p>{{ $review->position }}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endforeach
                                 <!-- Testimonial Slide End -->
 
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-header">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <p>We specialize in a wide range of construction services, including
-                                                    residential, commercial, and industrial projects. From initial design to
-                                                    final inspection, we work closely with our clients to understand their
-                                                    unique needs and vision.</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-body">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="{{ asset('frontend/images/author-3.jpg') }}"
-                                                        alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="author-content">
-                                                <h3>chris martinez</h3>
-                                                <p>logistics coordinator</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-header">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <p>We specialize in a wide range of construction services, including
-                                                    residential, commercial, and industrial projects. From initial design to
-                                                    final inspection, we work closely with our clients to understand their
-                                                    unique needs and vision.</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-body">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="{{ asset('frontend/images/author-4.jpg') }}"
-                                                        alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="author-content">
-                                                <h3>alis white</h3>
-                                                <p>structural engineer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -749,372 +651,6 @@
             </div>
         </div>
     </div>
+
     <!-- Our Testiminial End -->
-
-    <!-- Our FAQs Section Start -->
-    <div class="our-faqs">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">faqs</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Got questions? we've got answers</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">We specialize in a wide range of construction
-                            services, including residential, commercial, and industrial projects.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <!-- Our FAQs Images Start -->
-                    <div class="our-faqs-images">
-                        <div class="row align-items-end">
-                            <div class="col-md-6 col-6">
-                                <!-- FAQs Img Start -->
-                                <div class="faqs-img-1">
-                                    <figure class="image-anime reveal">
-                                        <img src="{{ asset('frontend/images/our-faqs-img-1.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <!-- FAQs Img End -->
-                            </div>
-                            <div class="col-md-6 col-6">
-                                <!-- FAQs Img Start -->
-                                <div class="faqs-img-2">
-                                    <figure class="image-anime reveal">
-                                        <img src="{{ asset('frontend/images/our-faqs-img-2.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <!-- FAQs Img End -->
-                            </div>
-                        </div>
-
-                        <div class="row align-items-start">
-                            <div class="col-md-6 col-6">
-                                <!-- FAQs Img Start -->
-                                <div class="faqs-img-1">
-                                    <figure class="image-anime reveal">
-                                        <img src="{{ asset('frontend/images/our-faqs-img-3.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <!-- FAQs Img End -->
-                            </div>
-                            <div class="col-md-6 col-6">
-                                <!-- FAQs Img Start -->
-                                <div class="faqs-img-2">
-                                    <figure class="image-anime reveal">
-                                        <img src="{{ asset('frontend/images/our-faqs-img-4.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <!-- FAQs Img End -->
-                            </div>
-                        </div>
-
-                        <div class="our-faqs-bulitup">
-                            <img src="{{ asset('frontend/images/icon-faq-bulitup.svg') }}" alt="">
-                        </div>
-                    </div>
-                    <!-- Our FAQs Images End -->
-                </div>
-
-                <div class="col-lg-7">
-                    <!-- FAQ Accordion Start -->
-                    <div class="faq-accordion" id="accordion">
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.25s">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                    type="button" aria-expanded="true" aria-controls="collapseOne">
-                                    Do you offer a free, no obligation quotation?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse show" id="collapseOne" data-bs-parent="#accordion"
-                                aria-labelledby="headingOne">
-                                <div class="accordion-body">
-                                    <p>Our post-construction services gives you peace of mind knowing that we are still here
-                                        for you even after.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" type="button" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    What services do you offer?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#accordion"
-                                aria-labelledby="headingTwo">
-                                <div class="accordion-body">
-                                    <p>Our post-construction services gives you peace of mind knowing that we are still here
-                                        for you even after.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.75s">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" type="button" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    What types of projects do you specialize in?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#accordion"
-                                aria-labelledby="headingThree">
-                                <div class="accordion-body">
-                                    <p>Our post-construction services gives you peace of mind knowing that we are still here
-                                        for you even after.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="1s">
-                            <h2 class="accordion-header" id="headingfour">
-                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#collapsefour" type="button" aria-expanded="false"
-                                    aria-controls="collapsefour">
-                                    How do I start a project with your company?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapsefour" data-bs-parent="#accordion"
-                                aria-labelledby="headingfour">
-                                <div class="accordion-body">
-                                    <p>Our post-construction services gives you peace of mind knowing that we are still here
-                                        for you even after.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-                    </div>
-                    <!-- FAQ Accordion End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our FAQs Section End -->
-
-    <!-- Our Blog Section End -->
-    <div class="our-blog">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">news & blog</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Articles & blog posts</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">We specialize in a wide range of construction
-                            services, including residential, commercial, and industrial projects.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <!-- Blog Item Start -->
-                    <div class="blog-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image" data-cursor-text="View">
-                            <figure>
-                                <a class="image-anime" href="#">
-                                    <img src="{{ asset('frontend/images/post-1.jpg') }}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <!-- Post Featured Image End -->
-
-                        <!-- post Item Content Start -->
-                        <div class="post-item-content">
-                            <!-- post Item Body Start -->
-                            <div class="post-item-body">
-                                <h2><a href="#">10 Essential Tips for Choosing the Right Builder</a></h2>
-                            </div>
-                            <!-- Post Item Body End-->
-
-                            <!-- Post Item Footer Start-->
-                            <div class="post-item-footer">
-                                <a class="readmore-btn" href="#">read more</a>
-                            </div>
-                            <!-- Post Item Footer End-->
-                        </div>
-                        <!-- post Item Content End -->
-                    </div>
-                    <!-- Blog Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Blog Item Start -->
-                    <div class="blog-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image" data-cursor-text="View">
-                            <figure>
-                                <a class="image-anime" href="#">
-                                    <img src="{{ asset('frontend/images/post-2.jpg') }}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <!-- Post Featured Image End -->
-
-                        <!-- post Item Content Start -->
-                        <div class="post-item-content">
-                            <!-- post Item Body Start -->
-                            <div class="post-item-body">
-                                <h2><a href="#">The Future of Sustainable Construction Innovations</a></h2>
-                            </div>
-                            <!-- Post Item Body End-->
-
-                            <!-- Post Item Footer Start-->
-                            <div class="post-item-footer">
-                                <a class="readmore-btn" href="#">read more</a>
-                            </div>
-                            <!-- Post Item Footer End-->
-                        </div>
-                        <!-- post Item Content End -->
-                    </div>
-                    <!-- Blog Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Blog Item Start -->
-                    <div class="blog-item wow fadeInUp" data-wow-delay="0.75s">
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image" data-cursor-text="View">
-                            <figure>
-                                <a class="image-anime" href="#">
-                                    <img src="{{ asset('frontend/images/post-3.jpg') }}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <!-- Post Featured Image End -->
-
-                        <!-- post Item Content Start -->
-                        <div class="post-item-content">
-                            <!-- post Item Body Start -->
-                            <div class="post-item-body">
-                                <h2><a href="#">How to Design Your Dream Home: A Step-by-Step Guide</a></h2>
-                            </div>
-                            <!-- Post Item Body End-->
-
-                            <!-- Post Item Footer Start-->
-                            <div class="post-item-footer">
-                                <a class="readmore-btn" href="#">read more</a>
-                            </div>
-                            <!-- Post Item Footer End-->
-                        </div>
-                        <!-- post Item Content End -->
-                    </div>
-                    <!-- Blog Item End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Blog End -->
-
-    <!-- Contact Us Section Start -->
-    <div class="contact-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-md-5">
-                    <!-- Contact Sidebar Start -->
-                    <div class="contact-sidebar wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Contact Info Start -->
-                        <div class="contact-info">
-                            <div class="icon-box">
-                                <img src="images/icon-phone.svg" alt="">
-                            </div>
-                            <div class="contact-info-content">
-                                <p>call support center 24/7</p>
-                                <h3>+1 809 120 6705</h3>
-                            </div>
-                        </div>
-                        <!-- Contact Info End -->
-
-                        <!-- Contact Info Start -->
-                        <div class="contact-info">
-                            <div class="icon-box">
-                                <img src="{{ asset('frontend/images/icon-mail.svg') }}" alt="">
-                            </div>
-                            <div class="contact-info-content">
-                                <p>write to us</p>
-                                <h3>info@domain.com</h3>
-                            </div>
-                        </div>
-                        <!-- Contact Info End -->
-
-                        <!-- Contact Info Image Start -->
-                        <div class="contact-info-image">
-                            <figure>
-                                <img src="{{ asset('frontend/images/contact-info-img.png') }}" alt="">
-                            </figure>
-                        </div>
-                        <!-- Contact Info Image End -->
-                    </div>
-                    <!-- Contact Sidebar End -->
-                </div>
-
-                <div class="col-lg-8 col-md-7">
-                    <!-- Contact Form start -->
-                    <div class="contact-form wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">contact us</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Get in touch with us</h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <form id="contactForm" data-toggle="validator" action="#" method="POST">
-                            <div class="row">
-                                <div class="form-group col-md-6 mb-4">
-                                    <input class="form-control" id="name" type="text" name="name"
-                                        placeholder="Enter Your name" required="">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group col-md-6 mb-4">
-                                    <input class="form-control" id="email" type="email" name="email"
-                                        placeholder="Enter Your email" required="">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group col-md-6 mb-4">
-                                    <input class="form-control" id="phone" type="text" name="phone"
-                                        placeholder="Phone number" required="">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group col-md-6 mb-4">
-                                    <input class="form-control" id="website" type="text" name="website"
-                                        placeholder="Subject" required="">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="form-group col-md-12 mb-5">
-                                    <textarea class="form-control" id="msg" name="msg" rows="3" placeholder="Message" required=""></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <button class="btn-default" type="submit">submit</button>
-                                    <div class="h3 hidden" id="msgSubmit"></div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Contact Form end -->
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection

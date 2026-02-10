@@ -15,6 +15,7 @@
                         <ul class="navbar-nav mr-auto" id="menu">
                             <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
+                             <ul><a class="dropdown-item" href="{{ route('frontend.testimonial') }}">Testimonials</a></ul>
                             <li class="nav-item"><a class="nav-link"
                                     href="{{ route('frontend.services') }}">Services</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('frontend.blog') }}">Blog</a></li>

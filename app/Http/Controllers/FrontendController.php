@@ -8,6 +8,7 @@ use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Project;
+use App\Models\Review;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,11 @@ class FrontendController extends Controller
 {
     public function home()
     {
-        return view('frontend.home.index');
+
+        $reviews = Review::where('status', 1)
+            ->orderBy('order')
+            ->get();
+        return view('frontend.home.index', compact('reviews'));
     }
     public function notFound()
     {
@@ -89,5 +94,12 @@ class FrontendController extends Controller
         $project = Project::where('slug', $slug)->firstOrFail();
         $popular_project = Project::where('status', 1)->take(5)->get();
         return view("frontend.project.projectShow", compact('project', 'popular_project'));
+    }
+    public function testimonial()
+    {
+        $reviews = Review::where('status', 1)
+            ->orderBy('order')
+            ->get();
+        return view("frontend.testimonial.testimonial", compact('reviews'));
     }
 }

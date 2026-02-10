@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\TeamController;
 
 Auth::routes(['register' => false]);
@@ -37,4 +38,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('faq', FaqController::class);
 
     Route::resource('team', TeamController::class);
+
+    Route::resource('review', ReviewController::class);
 });
