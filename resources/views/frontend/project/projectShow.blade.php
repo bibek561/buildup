@@ -2,27 +2,54 @@
 
 @section('content')
     <style>
-        .bg-breadcrumb {
-            background: linear-gradient(rgba(0, 58, 102, 0.9), rgba(0, 58, 102, 0.8)), url('{{ asset('storage/' . $project->banner_image) }}');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding: 0px 0 0px 0;
+        .simple-breadcrumb {
+            display: flex;
+            justify-content: center;
+            /* center horizontally */
+            align-items: center;
+            gap: 8px;
+            margin-top: -25px;
+            font-size: 16px;
+        }
+
+        .simple-breadcrumb a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .simple-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .simple-breadcrumb .arrow {
+            color: #aaa;
+        }
+
+        .simple-breadcrumb .current {
+            color: #fff;
+            font-weight: 500;
         }
     </style>
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{ $project->name }}</h1>
-                <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a class="text-white" href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="{{ route('frontend.project') }}">Project</a>
-                    </li>
-                    <li class="breadcrumb-item active text-secondary">{{ $project->name }}</li>
-                </ol>
+    <!-- Page Header Start -->
+    <div class="page-header parallaxie">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">Service</h1>
+                        <nav class="simple-breadcrumb" aria-label="breadcrumb">
+                            <a href="{{ route('home') }}">Home</a>
+                            <span class="arrow">›</span>
+                            <span class="current">Service</span>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
         </div>
     </div>
+    <!-- Page Header End -->
     <!-- Header End -->
     <div class="container py-5">
         <div class="row">

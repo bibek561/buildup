@@ -18,9 +18,8 @@ class FrontendController extends Controller
     public function home()
     {
 
-        $reviews = Review::where('status', 1)
-            ->orderBy('order')
-            ->get();
+        $reviews = Review::where('status', 1)->orderBy('order')->get();
+
         return view('frontend.home.index', compact('reviews'));
     }
     public function notFound()

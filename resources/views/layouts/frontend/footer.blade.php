@@ -44,11 +44,11 @@
                 <div class="footer-links">
                     <h3>company</h3>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">services</a></li>
-                        <li><a href="#">blog</a></li>
-                        <li><a href="#">faqs</a></li>
-                        <li><a href="#">contact us</a></li>
+                        <li><a href="{{ route('about') }}">about us</a></li>
+                        <li><a href="{{ route('frontend.services') }}">services</a></li>
+                        <li><a href="{{ route('frontend.blog') }}">blog</a></li>
+                        <li><a href="{{ route('frontend.faqs') }}">faqs</a></li>
+                        <li><a href="{{ route('frontend.contact') }}">contact us</a></li>
                     </ul>
                 </div>
                 <!-- Footer Links End -->
@@ -87,7 +87,7 @@
                             <img src="{{ asset('frontend/images/icon-location.svg') }}" alt="">
                         </div>
                         <!-- Icon Box End -->
-                        <p>37 San Juan Lane Graaf Florisstraat 22A,3021 CH</p>
+                        <p>Kathmandu Nepal</p>
                     </div>
                     <!-- Info Box End -->
                 </div>
