@@ -5,7 +5,7 @@
             <div class="container-fluid">
                 <!-- Logo Start -->
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('frontend/images/logo.svg') }}" alt="Logo">
+                    <img src="{{ asset('frontend/images/new-logo.jpeg') }}" alt="Logo" class="main-logo">
                 </a>
                 <!-- Logo End -->
 
@@ -15,7 +15,8 @@
                         <ul class="navbar-nav mr-auto" id="menu">
                             <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
-                             <ul><a class="dropdown-item" href="{{ route('frontend.testimonial') }}">Testimonials</a></ul>
+                            <ul><a class="dropdown-item" href="{{ route('frontend.testimonial') }}">Testimonials</a>
+                            </ul>
                             <li class="nav-item"><a class="nav-link"
                                     href="{{ route('frontend.services') }}">Services</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('frontend.blog') }}">Blog</a></li>
@@ -24,9 +25,11 @@
                                     <li class="nav-item"><a class="nav-link"
                                             href="{{ route('frontend.project') }}">Project</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('frontend.team') }}">Our Team</a>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('frontend.team') }}">Our
+                                            Team</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('frontend.faqs') }}">FAQ</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('frontend.faqs') }}">FAQ</a>
+                                    </li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('notFound') }}">404</a>
                                     </li>
                                 </ul>

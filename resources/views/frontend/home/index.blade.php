@@ -17,8 +17,7 @@
                         </div>
 
                         <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
-                            <a class="btn-default" href="#">get started</a>
-                            <a class="btn-default btn-highlighted" href="#">view Projects</a>
+                            <a class="btn-default btn-highlighted" href="{{ route('frontend.project') }}">view Projects</a>
                         </div>
                     </div>
                     <!-- Hero Content End -->
@@ -72,15 +71,15 @@
                         <!-- About Content Footer Start -->
                         <div class="about-content-footer wow fadeInUp" data-wow-delay="0.75s">
                             <div class="about-footer-btn">
-                                <a class="btn-default" href="#">get free quote</a>
+                                <a class="btn-default" href="{{ route('frontend.quote') }}">get free quote</a>
                             </div>
                             <div class="about-contact-support">
                                 <div class="icon-box">
                                     <img src="{{ asset('frontend/images/icon-phone.svg') }}" alt="">
                                 </div>
                                 <div class="about-support-content">
-                                    <p>call support center 24X7</p>
-                                    <h3>+1 809 120 6705</h3>
+                                    <p>Call Support Center 24/7</p>
+                                    <h3>+977 9806143223</h3>
                                 </div>
                             </div>
                         </div>
@@ -91,179 +90,6 @@
         </div>
     </div>
     <!-- About Section End -->
-
-    <!-- Our Service Section Start -->
-    <div class="our-service">
-        <div class="light-bg-section">
-            <div class="container-fluid">
-                <div class="row section-row">
-                    <div class="col-lg-12">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">our services</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Our construction services</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">We specialize in a wide range of construction
-                                services, including residential, commercial, and industrial projects.</p>
-                        </div>
-                        <!-- Section Title End -->
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <!-- Service Item Start -->
-                        <div class="service-item wow fadeInUp" data-wow-delay="0.25s">
-                            <!-- Service Image Start -->
-                            <div class="service-image" data-cursor-text="View">
-                                <a href="#">
-                                    <figure>
-                                        <img src="{{ asset('frontend/images/service-img-1.jpg') }}" alt="">
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- Service Image End -->
-
-                            <!-- Service Body Start -->
-                            <div class="service-body">
-                                <!-- Service Body Title Start -->
-                                <div class="service-body-title">
-                                    <h3>building construction</h3>
-                                </div>
-                                <!-- Service Body Title End -->
-
-                                <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our post-construction services gives you peace of mind knowing that we are still here
-                                        for you even after.</p>
-                                    <div class="service-content-footer">
-                                        <a class="readmore-btn" href="#">view more</a>
-                                    </div>
-                                </div>
-                                <!-- Service Content End -->
-                            </div>
-                            <!-- Service Body End -->
-                        </div>
-                        <!-- Service Item End -->
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <!-- Service Item Start -->
-                        <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
-                            <!-- Service Image Start -->
-                            <div class="service-image" data-cursor-text="View">
-                                <a href="#">
-                                    <figure>
-                                        <img src="{{ asset('frontend/images/service-img-2.jpg') }}" alt="">
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- Service Image End -->
-
-                            <!-- Service Body Start -->
-                            <div class="service-body">
-                                <!-- Service Body Title Start -->
-                                <div class="service-body-title">
-                                    <h3>architecture design</h3>
-                                </div>
-                                <!-- Service Body Title End -->
-
-                                <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our post-construction services gives you peace of mind knowing that we are still here
-                                        for you even after.</p>
-                                    <div class="service-content-footer">
-                                        <a class="readmore-btn" href="#">view more</a>
-                                    </div>
-                                </div>
-                                <!-- Service Content End -->
-                            </div>
-                            <!-- Service Body End -->
-                        </div>
-                        <!-- Service Item End -->
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <!-- Service Item Start -->
-                        <div class="service-item wow fadeInUp" data-wow-delay="0.75s">
-                            <!-- Service Image Start -->
-                            <div class="service-image" data-cursor-text="View">
-                                <a href="#">
-                                    <figure>
-                                        <img src="{{ asset('frontend/images/service-img-3.jpg') }}" alt="">
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- Service Image End -->
-
-                            <!-- Service Body Start -->
-                            <div class="service-body">
-                                <!-- Service Body Title Start -->
-                                <div class="service-body-title">
-                                    <h3>building renovation</h3>
-                                </div>
-                                <!-- Service Body Title End -->
-
-                                <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our post-construction services gives you peace of mind knowing that we are still here
-                                        for you even after.</p>
-                                    <div class="service-content-footer">
-                                        <a class="readmore-btn" href="#">view more</a>
-                                    </div>
-                                </div>
-                                <!-- Service Content End -->
-                            </div>
-                            <!-- Service Body End -->
-                        </div>
-                        <!-- Service Item End -->
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <!-- Service Item Start -->
-                        <div class="service-item wow fadeInUp" data-wow-delay="1s">
-                            <!-- Service Image Start -->
-                            <div class="service-image" data-cursor-text="View">
-                                <a href="#">
-                                    <figure>
-                                        <img src="{{ asset('frontend/images/service-img-4.jpg') }}" alt="">
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- Service Image End -->
-
-                            <!-- Service Body Start -->
-                            <div class="service-body">
-                                <!-- Service Body Title Start -->
-                                <div class="service-body-title">
-                                    <h3>building maintenance</h3>
-                                </div>
-                                <!-- Service Body Title End -->
-
-                                <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our post-construction services gives you peace of mind knowing that we are still here
-                                        for you even after.</p>
-                                    <div class="service-content-footer">
-                                        <a class="readmore-btn" href="#">view more</a>
-                                    </div>
-                                </div>
-                                <!-- Service Content End -->
-                            </div>
-                            <!-- Service Body End -->
-                        </div>
-                        <!-- Service Item End -->
-                    </div>
-
-                    <!-- Services Footer Btn Start -->
-                    <div class="service-footer-btn wow fadeInUp" data-wow-delay="1.25s">
-                        <a class="btn-default" href="#">view all services</a>
-                    </div>
-                    <!-- Services Footer Btn End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Service Section End -->
 
     <!-- Why Choose Us Section Start -->
     <div class="why-choose-us">
@@ -398,7 +224,7 @@
                         <div class="project-item wow fadeInUp" data-wow-delay="0.25s">
                             <!-- Project Image Start -->
                             <div class="project-image" data-cursor-text="View">
-                                <a href="#">
+                                <a href="{{ route('frontend.project') }}">
                                     <figure>
                                         <img src="{{ asset('frontend/images/our-project-1.jpg') }}" alt="">
                                     </figure>

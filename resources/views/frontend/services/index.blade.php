@@ -33,6 +33,7 @@
     <div class="page-header parallaxie">
         <div class="container">
             <div class="row">
+
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
@@ -112,7 +113,6 @@
         </div>
     </div>
     <!-- Page Service End -->
-
     <!-- What We Do Section Start -->
     <div class="what-we-do">
         <div class="container">
@@ -193,7 +193,7 @@
 
                     <!-- Section Btn Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a class="btn-default btn-large" href="#">get free quote</a>
+                        <a class="btn-default btn-large" href="{{ route('frontend.quote') }}">get free quote</a>
                     </div>
                     <!-- Section Btn End -->
                 </div>

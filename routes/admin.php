@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\QuoteController;
 
 Auth::routes(['register' => false]);
 
@@ -30,14 +31,18 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     //service
     Route::resource('services', ServicesController::class);
-
+    //blog
     Route::resource('blog', PostController::class);
-
+    //project
     Route::resource('project', ProjectController::class);
-
+    //faq
     Route::resource('faq', FaqController::class);
-
+    //team
     Route::resource('team', TeamController::class);
-
+    //review
     Route::resource('review', ReviewController::class);
+    //quote
+    Route::resource('quote',QuoteController::class);
+    //
+    
 });

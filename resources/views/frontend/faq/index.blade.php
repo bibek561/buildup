@@ -59,7 +59,7 @@
                     <div class="faq-section" id="faq-1">
                         <div class="section-title">
                             <h2 class="text-anime-style-3" data-cursor="-opaque">
-                                Building construction
+                                Frequently Asked Quesion
                             </h2>
                         </div>
 

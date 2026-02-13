@@ -8,7 +8,7 @@
                     <!-- Footer Logo Start -->
                     <div class="footer-logo">
                         <figure>
-                            <img src="{{ asset('frontend/images/footer-logo.svg') }}" alt="">
+                            <img src="{{ asset('frontend/images/footer-logo.jpeg') }}" alt="">
                         </figure>
                     </div>
                     <!-- Footer Logo End -->

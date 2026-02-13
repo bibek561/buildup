@@ -94,7 +94,7 @@
                          <!-- About Content Footer Start -->
                          <div class="about-us-content-footer wow fadeInUp" data-wow-delay="0.75s">
                              <div class="about-us-footer-btn">
-                                 <a class="btn-default" href="#">get free quote</a>
+                                 <a class="btn-default" href="{{ route('frontend.quote') }}">get free quote</a>
                              </div>
                              <div class="about-us-contact-support">
                                  <div class="icon-box">

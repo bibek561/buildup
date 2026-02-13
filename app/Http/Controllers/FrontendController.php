@@ -45,9 +45,7 @@ class FrontendController extends Controller
     }
     public function faqs()
     {
-        $faqs = Faq::where('status', 1)
-            ->orderBy('order', 'asc')
-            ->get();
+        $faqs = Faq::where('status', 1)->orderBy('order', 'asc')->get();
         return view("frontend.faq.index", compact('faqs'));
     }
     public function team()
@@ -100,5 +98,9 @@ class FrontendController extends Controller
             ->orderBy('order')
             ->get();
         return view("frontend.testimonial.testimonial", compact('reviews'));
+    }
+    public function quote()
+    {
+        return view("frontend.quote.index");
     }
 }

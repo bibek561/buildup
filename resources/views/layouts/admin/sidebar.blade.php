@@ -102,10 +102,17 @@
                 <div data-i18n="General Setting">Team</div>
             </a>
         </li>
-        <li class="menu-item {{ Request::segment(2) == 'review' ? 'active open' : '' }}">
+        <li class="menu-item {{ Request::segment(2) == 'testinomial' ? 'active open' : '' }}">
             <a class="menu-link text-decoration-none" id="slider-link" href="{{ route('review.index') }}">
                 <i class="menu-icon tf-icons bx bxs-quote-alt-left"></i>
-                <div data-i18n="General Setting">Testimonials</div>
+                <div data-i18n="General Setting">Testimonial</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ Request::segment(2) == 'quote' ? 'active open' : '' }}">
+            <a class="menu-link text-decoration-none" id="slider-link" href="{{ route('quote.index') }}">
+                <i class="menu-icon tf-icons bx bxs-quote-alt-left"></i>
+                <div data-i18n="General Setting">Quote</div>
             </a>
         </li>
     </ul>
